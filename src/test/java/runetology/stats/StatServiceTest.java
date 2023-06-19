@@ -44,4 +44,24 @@ public class StatServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testBellowAverage() {
+        StatService service = new StatService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.salesBellowAverage(sales);
+        long expected = 5;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testAboveAverage() {
+        StatService service = new StatService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.salesAboveAverage(sales);
+        long expected = 5;
+
+        Assertions.assertEquals(expected, actual);
+    }
 }

@@ -33,4 +33,24 @@ public class StatService {
         }
         return monthMinimum +1;
     }
+    public int salesBellowAverage (long[] sales){
+        int couter = 0;
+        for (long sale :sales){
+            if (sale < average(sales)){
+                couter ++;
+
+            }
+        }
+        return couter;
+    }
+    public int salesAboveAverage (long[] sales){
+        int couter = 0;
+        for (long sale :sales){
+            if (sale > average(sales)){
+                couter ++;
+
+            }
+        }
+        return couter;
+    }
 }
