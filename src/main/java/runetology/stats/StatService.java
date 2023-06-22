@@ -9,6 +9,7 @@ public class StatService {
         return totalSale;
     }
 
+
     public long average(long[] sales) {
 
         return sum(sales) / sales.length;
@@ -42,7 +43,7 @@ public class StatService {
         int couter = 0;
         long averageSale = average(sales);
         for (long sale : sales) {
-            if (sale < average(sales)) {
+            if (sale < averageSale) {
                 couter++;
 
             }
@@ -54,7 +55,7 @@ public class StatService {
         int couter = 0;
         long averageSale = average(sales);
         for (long sale : sales) {
-            if (sale > average(sales)) {
+            if (sale > averageSale) {
                 couter++;
 
             }
